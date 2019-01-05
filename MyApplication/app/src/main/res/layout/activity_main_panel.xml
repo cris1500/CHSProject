@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    tools:context=".MainPanel">
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/room1"
+        android:layout_width="173dp"
+        android:layout_height="147dp"
+        android:clickable="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:clickable="true"-->
+            <!--android:contentDescription="CAMERA 1"-->
+            <!--tools:srcCompat="@tools:sample/backgrounds/scenic[0]" />-->
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="175dp"
+            android:layout_height="143dp"
+            android:clickable="true"
+            android:onClick="room1Clicked"
+            android:gravity="center"
+            android:text="CAMERA 1"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_column="1"
+            app:layout_row="1" />
+    </android.support.v7.widget.GridLayout>
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/room2"
+        android:layout_width="173dp"
+        android:layout_height="147dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043">
+
+       <!-- <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="CAMERA 2"
+            tools:srcCompat="@tools:sample/backgrounds/scenic[7]" /> -->
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="175dp"
+            android:layout_height="143dp"
+            android:clickable="true"
+            android:onClick="room2Clicked"
+            android:gravity="center"
+            android:text="CAMERA 2"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_column="1"
+            app:layout_row="1" />
+    </android.support.v7.widget.GridLayout>
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/room3"
+        android:layout_width="173dp"
+        android:layout_height="147dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469">
+
+       <!-- <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="CAMERA 3"
+            tools:srcCompat="@tools:sample/backgrounds/scenic[10]" /> -->
+        <TextView
+            android:id="@+id/textview3"
+            android:layout_width="175dp"
+            android:layout_height="143dp"
+            android:clickable="true"
+            android:onClick="room3Clicked"
+            android:gravity="center"
+            android:text="CAMERA 3"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_column="1"
+            app:layout_row="1" />
+    </android.support.v7.widget.GridLayout>
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/room4"
+        android:layout_width="173dp"
+        android:layout_height="147dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469">
+
+<!--        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="CAMERA 4"
+            tools:srcCompat="@tools:sample/backgrounds/scenic[19]" /> -->
+        <TextView
+            android:id="@+id/textview4"
+            android:layout_width="175dp"
+            android:layout_height="143dp"
+            android:clickable="true"
+            android:onClick="room4Clicked"
+            android:gravity="center"
+            android:text="CAMERA 4"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_column="1"
+            app:layout_row="1" />
+    </android.support.v7.widget.GridLayout>
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/gate"
+        android:layout_width="352dp"
+        android:layout_height="177dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952">
+
+        <TextView
+            android:id="@+id/textview5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="gateClicked"
+            android:gravity="center"
+            android:text="POARTA"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_column="0"
+            app:layout_row="0" />
+    </android.support.v7.widget.GridLayout>
+</android.support.constraint.ConstraintLayout>
