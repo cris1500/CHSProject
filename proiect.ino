@@ -79,18 +79,18 @@ void Camera4Off()
   digitalWrite(ledPinG, LOW); // set the LED off.  
 }
 
-void PoartaOn()
+void PoartaOff()
 {
-  for (pos = 0; pos <= 90; pos += 1) { // goes from 0 degrees to 180 degrees
+  for (pos = 0; pos <= 90; pos += 10) { // goes from 0 degrees to 180 degrees
     // in steps of 1 degree
     myservo.write(pos);              // tell servo to go to position in variable 'pos'
     delay(15);                       // waits 15ms for the servo to reach the position
   }
 }
 
-void PoartaOff()
+void PoartaOn()
 {
-  for (pos = 90; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+  for (pos = 90; pos >= 0; pos -= 10) { // goes from 180 degrees to 0 degrees
     myservo.write(pos);              // tell servo to go to position in variable 'pos'
     delay(15);                       // waits 15ms for the servo to reach the position
   }
@@ -98,57 +98,41 @@ void PoartaOff()
 
 void loop()
 {
-   /*Camera1On();
-   delay(3000);
-   Camera1Off();
-   delay(3000);
-   
-   Camera2On();
-   delay(3000);
-   Camera2Off();
-   delay(3000); 
-
-   Camera3On();
-   delay(3000);
-   Camera3Off();
-   delay(3000);
-
-   Camera4On();
-   delay(3000);
-   Camera4Off();
-   delay(3000);
-   
-   PoartaOn();
-   delay(3000);
-   PoartaOff();
-
-   delay(3000);
-   delay(3000);
-   delay(3000);
-    delay(3000);
-*/
-   // put your main code here, to run repeatedly:
-
   if(bluetooth.available())
   {
     String a = bluetooth.readString();
     Serial.println(a);
-   
     
-    //if(a == "0")
-      //Camera1On();
-    //else
-      //if(a == "1")
-        //Camera1Off();
+    if(a == "0")
+      Camera1On();
+    else
+      if(a == "1")
+        Camera1Off();
+      else
+        if(a == "2")
+          Camera2On();
+         else
+          if(a == "3")
+            Camera2Off();
+           else
+            if(a == "4")
+              Camera3On();
+             else
+              if(a == "5")
+                Camera3Off();
+              else
+                if(a == "6")
+                  Camera4On();
+                 else
+                  if(a == "7")
+                    Camera4Off();
+                   else
+                    if(a == "8")
+                      PoartaOn();
+                    else
+                      if(a == "9")
+                        PoartaOff();
 
-  
-          
-    //if(a == "open")
-      //call open function
-    //else
-     //call close
-    //Serial.flush();
-    delay(10);
   }
   
 }
