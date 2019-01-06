@@ -16,12 +16,11 @@ import java.util.UUID;
 public class GateActivity extends AppCompatActivity {
 
     private static boolean GateON;
-    private String address = null;
+    private String address = "00:21:13:04:1F:F7";
     private ProgressDialog progress;
     BluetoothAdapter myBluetooth = null;
     BluetoothSocket btSocket = null;
     private boolean isBtConnected = false;
-    //SPP UUID. Look for it
     private static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
     @Override
@@ -29,13 +28,12 @@ public class GateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gate);
 
-        address = "00:21:13:04:1F:F7";
         new ConnectBT().execute(); //Call the class to connect
     }
 
     public void openGate(View view) {
         if(GateON == true){
-            Toast.makeText(getBaseContext(), "Gate is already open.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(), "Poarta este deja deschisa.", Toast.LENGTH_LONG).show();
         }
         else {
             this.GateON = true;
@@ -48,7 +46,7 @@ public class GateActivity extends AppCompatActivity {
                 }
                 catch (IOException e)
                 {
-                    Toast.makeText(getApplicationContext(), "Error!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Eroare!", Toast.LENGTH_LONG).show();
                 }
             }
         }
@@ -56,7 +54,7 @@ public class GateActivity extends AppCompatActivity {
 
     public void closeGate(View view) {
         if(GateON == false){
-            Toast.makeText(getBaseContext(), "Gate is already closed.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(), "Poarta este deja inchisa.", Toast.LENGTH_LONG).show();
         }
         else {
             this.GateON = false;
@@ -69,7 +67,7 @@ public class GateActivity extends AppCompatActivity {
                 }
                 catch (IOException e)
                 {
-                    Toast.makeText(getApplicationContext(), "Error!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Eroare!", Toast.LENGTH_LONG).show();
                 }
             }
         }
@@ -85,7 +83,7 @@ public class GateActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute()
         {
-            progress = ProgressDialog.show(GateActivity.this, "Connecting...", "Please wait!");  //show a progress dialog
+            progress = ProgressDialog.show(GateActivity.this, "Conectare...", "Va rugam sa asteptati!");  //show a progress dialog
         }
 
         @Override
@@ -120,13 +118,13 @@ public class GateActivity extends AppCompatActivity {
 
             if (!ConnectSuccess)
             {
-                Toast.makeText(getApplicationContext(), "Connection failed.", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Conexiune esuata.", Toast.LENGTH_LONG).show();
                 //msg("Connection Failed. Is it a SPP Bluetooth? Try again.");
-                //finish();
+                finish();
             }
             else
             {
-                Toast.makeText(getApplicationContext(), "Connected!!!!!!!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Conectat!", Toast.LENGTH_LONG).show();
                 //msg("Connected.");
                 isBtConnected = true;
             }

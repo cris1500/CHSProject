@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
        <!-- <activity android:name=".ConnectionClass"/> -->
-
+        <activity android:name="BluetoothConnection" />
         <activity android:name=".MainPanel" />
         <activity android:name=".Room1Activity" />
         <activity android:name=".Room2Activity" />

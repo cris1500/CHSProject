@@ -27,8 +27,7 @@ public class MainPanel extends AppCompatActivity {
 
         if(myBluetooth == null)
         {
-            //Show a mensag. that the device has no bluetooth adapter
-            Toast.makeText(getApplicationContext(), "Bluetooth Device Not Available", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Bluetooth device not available", Toast.LENGTH_LONG).show();
 
             //finish apk
             //finish();
@@ -39,7 +38,6 @@ public class MainPanel extends AppCompatActivity {
             Intent turnBTon = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(turnBTon,1);
         }
-        //Toast.makeText(getApplicationContext(), "Paired devices next", Toast.LENGTH_LONG).show();
         pairedDevicesList();
     }
 
@@ -53,7 +51,6 @@ public class MainPanel extends AppCompatActivity {
             {
                 if(bt.getName().contains("HC")){
                     address = bt.getAddress();
-                    //Toast.makeText(getApplicationContext(), "Am obtinut adresa MAC a bluetooth", Toast.LENGTH_LONG).show();
                 }
             }
         }

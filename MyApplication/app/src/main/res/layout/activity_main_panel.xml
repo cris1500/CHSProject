@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="true"
+    android:background="@android:color/darker_gray"
     tools:context=".MainPanel">
 
     <android.support.v7.widget.GridLayout
@@ -13,6 +14,8 @@
         android:layout_height="147dp"
         android:clickable="true"
         android:visibility="visible"
+        android:background="@android:color/holo_blue_dark"
+        android:shadowColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.075"
@@ -35,6 +38,7 @@
             android:clickable="true"
             android:onClick="room1Clicked"
             android:gravity="center"
+
             android:text="CAMERA 1"
             android:textAllCaps="true"
             android:textColor="#000000"
@@ -48,6 +52,8 @@
         android:id="@+id/room2"
         android:layout_width="173dp"
         android:layout_height="147dp"
+        android:background="@android:color/holo_green_dark"
+        android:shadowColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.924"
@@ -83,6 +89,8 @@
         android:layout_width="173dp"
         android:layout_height="147dp"
         android:clickable="true"
+        android:background="@android:color/holo_red_dark"
+        android:shadowColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.075"
@@ -118,9 +126,12 @@
         android:layout_width="173dp"
         android:layout_height="147dp"
         android:clickable="true"
+        android:background="@android:color/holo_green_light"
+        android:shadowColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.924"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.469">
@@ -151,10 +162,13 @@
         android:id="@+id/gate"
         android:layout_width="352dp"
         android:layout_height="177dp"
+        android:background="@android:color/darker_gray"
+        android:shadowColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.685"
         app:layout_constraintVertical_bias="0.952">
 
         <TextView
@@ -162,11 +176,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clickable="true"
-            android:onClick="gateClicked"
             android:gravity="center"
+            android:onClick="gateClicked"
             android:text="POARTA"
+
             android:textAllCaps="true"
-            android:textColor="#000000"
+            android:textColor="@color/colorPrimary"
             android:textStyle="bold"
             android:visibility="visible"
             app:layout_column="0"

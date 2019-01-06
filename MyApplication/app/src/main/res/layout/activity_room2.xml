@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     tools:context=".Room2Activity">
 
     <android.support.v7.widget.GridLayout
@@ -15,14 +16,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06">
+        app:layout_constraintVertical_bias="0.04"
+        app:layout_constraintHorizontal_bias="0.685">
 
         <Button
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="R2LedON"
-            android:text="APRINDE LED"
+            android:text="APRINDE"
+
+            android:shadowColor="@color/colorPrimaryDark"
+            android:background="@android:color/darker_gray"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="cursive"
+            android:textSize="36sp"
             app:layout_column="0"
             app:layout_row="0" />
     </android.support.v7.widget.GridLayout>
@@ -35,14 +43,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94">
+        app:layout_constraintVertical_bias="0.939"
+        app:layout_constraintHorizontal_bias="0.685">
 
         <Button
             android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="R2LedOFF"
-            android:text="STINGE LED"
+            android:shadowColor="@color/colorPrimaryDark"
+            android:background="@android:color/darker_gray"
+            android:text="STINGE"
+            android:fontFamily="cursive"
+            android:textSize="36sp"
+            android:textColor="@color/colorPrimaryDark"
             app:layout_column="0"
             app:layout_row="0" />
     </android.support.v7.widget.GridLayout>

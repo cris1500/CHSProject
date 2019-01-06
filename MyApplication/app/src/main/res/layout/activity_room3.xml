@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     tools:context=".Room3Activity">
 
     <android.support.v7.widget.GridLayout
@@ -22,7 +23,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="R3LedON"
-            android:text="APRINDE LED"
+            android:text="APRINDE"
+
+            android:shadowColor="@color/colorPrimaryDark"
+            android:background="@android:color/darker_gray"
+            android:fontFamily="cursive"
+            android:textSize="36sp"
+            android:textColor="@color/colorPrimaryDark"
             app:layout_column="0"
             app:layout_row="0" />
     </android.support.v7.widget.GridLayout>
@@ -42,7 +49,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="R3LedOFF"
-            android:text="STINGE LED"
+            android:text="STINGE"
+
+            android:shadowColor="@color/colorPrimaryDark"
+            android:background="@android:color/darker_gray"
+            android:fontFamily="cursive"
+            android:textSize="36sp"
+            android:textColor="@color/colorPrimaryDark"
             app:layout_column="0"
             app:layout_row="0" />
     </android.support.v7.widget.GridLayout>

@@ -16,7 +16,7 @@ import java.util.UUID;
 public class Room2Activity extends AppCompatActivity {
 
     private static boolean LedON;
-    private String address = null;
+    private String address = "00:21:13:04:1F:F7";
     private ProgressDialog progress;
     BluetoothAdapter myBluetooth = null;
     BluetoothSocket btSocket = null;
@@ -28,13 +28,12 @@ public class Room2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room2);
-        address = "00:21:13:04:1F:F7";
         new ConnectBT().execute(); //Call the class to connect
     }
 
     public void R2LedON(View view) {
         if(LedON == true){
-            Toast.makeText(getBaseContext(), "LED is already on.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(), "Lumina este deja pornita.", Toast.LENGTH_LONG).show();
         }
         else {
             this.LedON = true;
@@ -47,7 +46,7 @@ public class Room2Activity extends AppCompatActivity {
                 }
                 catch (IOException e)
                 {
-                    Toast.makeText(getApplicationContext(), "Error!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Eroare!", Toast.LENGTH_LONG).show();
                 }
             }
         }
@@ -55,7 +54,7 @@ public class Room2Activity extends AppCompatActivity {
 
     public void R2LedOFF(View view) {
         if(LedON == false){
-            Toast.makeText(getBaseContext(), "LED is already off.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(), "Lumina este deja stinsa.", Toast.LENGTH_LONG).show();
         }
         else {
             this.LedON = false;
@@ -68,7 +67,7 @@ public class Room2Activity extends AppCompatActivity {
                 }
                 catch (IOException e)
                 {
-                    Toast.makeText(getApplicationContext(), "Error!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Eroare!", Toast.LENGTH_LONG).show();
                 }
             }
         }
@@ -86,7 +85,7 @@ public class Room2Activity extends AppCompatActivity {
         @Override
         protected void onPreExecute()
         {
-            progress = ProgressDialog.show(Room2Activity.this, "Connecting...", "Please wait!");  //show a progress dialog
+            progress = ProgressDialog.show(Room2Activity.this, "Conectare...", "Va rugam sa asteptati!");  //show a progress dialog
         }
 
         @Override
@@ -121,13 +120,13 @@ public class Room2Activity extends AppCompatActivity {
 
             if (!ConnectSuccess)
             {
-                Toast.makeText(getApplicationContext(), "Connection failed.", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Conexiune esuata.", Toast.LENGTH_LONG).show();
                 //msg("Connection Failed. Is it a SPP Bluetooth? Try again.");
-                //finish();
+                finish();
             }
             else
             {
-                Toast.makeText(getApplicationContext(), "Connected!!!!!!!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Conectat!", Toast.LENGTH_LONG).show();
                 //msg("Connected.");
                 isBtConnected = true;
             }

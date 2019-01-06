@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     tools:context=".GateActivity">
 
 
@@ -23,7 +24,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="openGate"
-            android:text="DESCHIDE POARTA"
+            android:text="DESCHIDE"
+            android:shadowColor="@color/colorPrimaryDark"
+            android:background="@android:color/darker_gray"
+            android:fontFamily="cursive"
+            android:textSize="36sp"
+            android:textColor="@color/colorPrimaryDark"
             app:layout_column="0"
             app:layout_row="0" />
     </android.support.v7.widget.GridLayout>
@@ -43,7 +49,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="closeGate"
-            android:text="INCHIDE POARTA"
+            android:text="INCHIDE"
+            android:shadowColor="@color/colorPrimaryDark"
+            android:background="@android:color/darker_gray"
+            android:fontFamily="cursive"
+            android:textSize="36sp"
+            android:textColor="@color/colorPrimaryDark"
             app:layout_column="0"
             app:layout_row="0" />
     </android.support.v7.widget.GridLayout>
